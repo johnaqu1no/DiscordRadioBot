@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipDefaultLibCheck": true,
+        "typeRoots": [
+            "global.d.ts"
+        ],
+        "lib": [
+            "dom",
+            "esnext"
+        ],
+        "outDir": "./prod",
+        "skipLibCheck": true
+    },
+    "watchOptions": {
+        "excludeFiles": [
+            "config.json",
+        ],
+    },
+    "exclude": [
+        "src/react",
+    ],
+    "ts-node": {
+        "files": true
+    },
+}

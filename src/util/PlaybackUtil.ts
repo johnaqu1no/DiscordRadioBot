@@ -32,7 +32,7 @@ export async function playCurrentGuildQueue(id: string, audioPlayer: AudioPlayer
     }
 
     console.log(`Playing ${guildRadioCache.queue[guildRadioCache.index]} from ${guildRadioCache.radio}`);
-    console.log(`Current queue: ${guildRadioCache.queue}`);
+    // console.log(`Current queue: ${guildRadioCache.queue}`);
 
     const songPath = guildRadioCache.queue[guildRadioCache.index];
     audioPlayer.play(createAudioResource(songPath, { inputType: StreamType.Arbitrary }));

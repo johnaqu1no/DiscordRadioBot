@@ -60,6 +60,7 @@ export default class JoinVoiceChannelEvent extends Event {
                     }
 
                     if (newState.status === 'idle') {
+                        console.log(`[DEBUG] ${guild.name} is idle. Playing next song...`);
                         incrementCurrentGuildIndex(guild.id);
                         await playCurrentGuildQueue(guild.id, audioPlayer);
                     }
@@ -93,6 +94,7 @@ export default class JoinVoiceChannelEvent extends Event {
                 queue.set(guild.id, guildRadioCache);
 
                 if (allFiles.length > 0) {
+                    console.log(`[DEBUG] Found ${allFiles.length} songs in the radio folder for ${artistName}.`);
                     await playCurrentGuildQueue(guild.id, audioPlayer);
                 } else {
                     console.log(`[DEBUG] No songs found in the radio folder for ${artistName}.`);
